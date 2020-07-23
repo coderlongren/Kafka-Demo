@@ -21,6 +21,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Map;
 import java.util.Properties;
+import java.util.concurrent.CompletableFuture;
 
 /**
  * 〈一句话功能简述〉<br>
@@ -48,27 +49,27 @@ public class KafkaDemoProducer {
     }
 
     public void send() {
+
         Producer<String, String> producer = null;
         try {
             producer = new KafkaProducer<String, String>(properties);
-            for (int i = 0; i < 100; i++) {
+            for (int i = 0; i < 10000; i++) {
                 String msg = "This is Message " + i;
                 producer.send(new ProducerRecord<String, String>(DEMO_TOPIC, msg));
-                System.out.println("Sent:" + msg);
-                //                Thread.sleep(1000);
+                LOGGER.info("send message : {}", msg);
+                System.out.println(i);
             }
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
             producer.close();
         }
-
-
     }
-
-    public void sendSync() {
-
-    }
+//
+//    public CompletableFuture<Boolean> sendSync(byte[] msg) {
+//
+//        CompletableFuture.supplyAsync()
+//    }
 
     public static void main(String[] args) {
         KafkaDemoProducer kafkaDemoProducer = new KafkaDemoProducer();

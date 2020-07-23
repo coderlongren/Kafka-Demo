@@ -1,0 +1,11 @@
+/Users/sailongren/gitRes/Kafka-Demo/src/main/java/com/coderlong/kafka/producer/AvroProducer.java
+/Users/sailongren/gitRes/Kafka-Demo/src/main/java/com/coderlong/kafka/producer/ProducerListener.java
+/Users/sailongren/gitRes/Kafka-Demo/src/main/java/com/coderlong/kafka/producer/AbstractProducer.java
+/Users/sailongren/gitRes/Kafka-Demo/src/main/java/com/coderlong/kafka/controller/KafkaAccessController.java
+/Users/sailongren/gitRes/Kafka-Demo/src/main/java/com/coderlong/kafka/producer/CustomerGenerator.java
+/Users/sailongren/gitRes/Kafka-Demo/src/main/java/com/coderlong/kafka/KafkaApplication.java
+/Users/sailongren/gitRes/Kafka-Demo/src/main/java/com/coderlong/kafka/consumer/AbstractConsumer.java
+/Users/sailongren/gitRes/Kafka-Demo/src/main/java/com/coderlong/kafka/leetcode/Solution.java
+/Users/sailongren/gitRes/Kafka-Demo/src/main/java/com/coderlong/kafka/producer/KafkaDemoProducer.java
+/Users/sailongren/gitRes/Kafka-Demo/src/main/java/com/coderlong/kafka/producer/bean/Customer.java
+/Users/sailongren/gitRes/Kafka-Demo/src/main/java/com/coderlong/kafka/CAS/TestUnSafe.java

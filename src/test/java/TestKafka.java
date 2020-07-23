@@ -24,16 +24,16 @@ import java.util.Arrays;
  * @since 1.0.0
  */
 public class TestKafka {
-    @Test
-    public void testConsumer() {
-        AbstractConsumer<String, String> consumer = new AbstractConsumer<>();
-        consumer.receive(Arrays.asList("HelloWorld", "mytest"), 1000);
-    }
-
-    @Test
-    public void testProducer() {
-        KafkaDemoProducer producer = new KafkaDemoProducer();
-        producer.send();
-    }
+//    @Test
+//    public void testConsumer() {
+//        AbstractConsumer<String, String> consumer = new AbstractConsumer<>();
+//        consumer.receive(Arrays.asList("HelloWorld", "mytest"), 1000);
+//    }
+//
+//    @Test
+//    public void testProducer() {
+//        KafkaDemoProducer producer = new KafkaDemoProducer();
+//        producer.send();
+//    }
 
 }

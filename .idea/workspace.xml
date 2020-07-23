@@ -2,15 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d4e7f06-f6c8-4ddb-90d6-80d1db11637d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/hotReloadPlugin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coderlong/kafka/KafkaApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coderlong/kafka/controller/KafkaAccessController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/logback.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/coderlong/kafka/consumer/AbstractConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coderlong/kafka/consumer/AbstractConsumer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/coderlong/kafka/producer/KafkaDemoProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coderlong/kafka/producer/KafkaDemoProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/kafka_consumer.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/kafka_consumer.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/kafka_producer.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/kafka_producer.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestKafka.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestKafka.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/coderlong/kafka/consumer/AbstractConsumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/coderlong/kafka/consumer/AbstractConsumer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/coderlong/kafka/leetcode/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/coderlong/kafka/leetcode/Solution.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/coderlong/kafka/producer/KafkaDemoProducer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/coderlong/kafka/producer/KafkaDemoProducer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/kafka_consumer.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/kafka_consumer.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/kafka_producer.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/kafka_producer.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/TestKafka.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestKafka.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,11 +30,6 @@
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>send</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,13 +49,18 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555749067790" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager" selected="Application.Solution">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.KafkaApplication">
     <configuration name="AvroProducer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.coderlong.kafka.producer.AvroProducer" />
       <module name="kafka" />
@@ -67,9 +74,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="KafkaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.coderlong.kafka.KafkaApplication" />
+      <module name="Kafka-Demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.coderlong.kafka.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="KafkaDemoProducer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8.0_191" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.coderlong.kafka.producer.KafkaDemoProducer" />
-      <module name="kafka" />
+      <module name="Kafka-Demo" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.coderlong.kafka.producer.*" />
@@ -106,30 +128,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestKafka.testProducer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kafka" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestKafka" />
-      <option name="METHOD_NAME" value="testProducer" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.KafkaDemoProducer" />
       <item itemvalue="Application.AvroProducer" />
       <item itemvalue="Application.TestUnSafe" />
       <item itemvalue="Application.Solution" />
-      <item itemvalue="JUnit.TestKafka.testProducer" />
+      <item itemvalue="Application.KafkaApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.KafkaApplication" />
+        <item itemvalue="Application.KafkaDemoProducer" />
         <item itemvalue="Application.Solution" />
         <item itemvalue="Application.TestUnSafe" />
         <item itemvalue="Application.AvroProducer" />
-        <item itemvalue="Application.KafkaDemoProducer" />
-        <item itemvalue="JUnit.TestKafka.testProducer" />
       </list>
     </recent_temporary>
   </component>
@@ -179,27 +191,83 @@
     </history-entry>
   </component>
   <component name="WindowStateProjectService">
+    <state x="572" y="225" key="#KafkaDemoProducer" timestamp="1595489887587">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="572" y="225" key="#KafkaDemoProducer/1792.0.2560.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1595489887587" />
     <state x="745" y="467" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1595489410712">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="745" y="467" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/1792.0.2560.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1595489410712" />
+    <state width="1750" height="369" key="GridCell.Tab.0.bottom" timestamp="1595508741125">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1750" height="369" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1595508741125" />
+    <state width="1750" height="282" key="GridCell.Tab.0.bottom/1792.0.2560.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1595500541933" />
+    <state width="1750" height="369" key="GridCell.Tab.0.center" timestamp="1595508741118">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1750" height="369" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1595508741118" />
+    <state width="1750" height="282" key="GridCell.Tab.0.center/1792.0.2560.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1595500541930" />
+    <state width="1750" height="369" key="GridCell.Tab.0.left" timestamp="1595508741117">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1750" height="369" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1595508741117" />
+    <state width="1750" height="282" key="GridCell.Tab.0.left/1792.0.2560.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1595500541929" />
+    <state width="1750" height="369" key="GridCell.Tab.0.right" timestamp="1595508741119">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1750" height="369" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1595508741119" />
+    <state width="1750" height="282" key="GridCell.Tab.0.right/1792.0.2560.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1595500541932" />
+    <state width="1750" height="369" key="GridCell.Tab.1.bottom" timestamp="1595508741129">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1750" height="369" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1595508741129" />
+    <state width="1750" height="389" key="GridCell.Tab.1.bottom/0.23.1792.1020@0.23.1792.1020" timestamp="1595508308105" />
+    <state width="1750" height="390" key="GridCell.Tab.1.bottom/1792.0.2560.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1595500328812" />
+    <state width="1750" height="369" key="GridCell.Tab.1.center" timestamp="1595508741127">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1750" height="369" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1595508741127" />
+    <state width="1750" height="389" key="GridCell.Tab.1.center/0.23.1792.1020@0.23.1792.1020" timestamp="1595508308103" />
+    <state width="1750" height="390" key="GridCell.Tab.1.center/1792.0.2560.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1595500328810" />
+    <state width="1750" height="369" key="GridCell.Tab.1.left" timestamp="1595508741126">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1750" height="369" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1595508741126" />
+    <state width="1750" height="389" key="GridCell.Tab.1.left/0.23.1792.1020@0.23.1792.1020" timestamp="1595508308102" />
+    <state width="1750" height="390" key="GridCell.Tab.1.left/1792.0.2560.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1595500328808" />
+    <state width="1750" height="369" key="GridCell.Tab.1.right" timestamp="1595508741128">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1750" height="369" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1595508741128" />
+    <state width="1750" height="389" key="GridCell.Tab.1.right/0.23.1792.1020@0.23.1792.1020" timestamp="1595508308104" />
+    <state width="1750" height="390" key="GridCell.Tab.1.right/1792.0.2560.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1595500328811" />
+    <state x="554" y="317" width="683" height="486" key="find.popup" timestamp="1595508381364">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="554" y="317" width="683" height="486" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1595508381364" />
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1595508438147">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1595508438147" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/coderlong/kafka/producer/KafkaDemoProducer.java</url>
-          <line>50</line>
+          <line>52</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/coderlong/kafka/producer/KafkaDemoProducer.java</url>
-          <line>53</line>
+          <line>55</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/coderlong/kafka/producer/KafkaDemoProducer.java</url>
-          <line>55</line>
+          <line>57</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -226,6 +294,36 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/coderlong/kafka/leetcode/Solution.java</url>
           <line>39</line>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/0.11.0.0/kafka-clients-0.11.0.0-sources.jar!/org/apache/kafka/clients/producer/KafkaProducer.java</url>
+          <line>350</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.0.9.RELEASE/spring-context-5.0.9.RELEASE-sources.jar!/org/springframework/context/support/AbstractApplicationContext.java</url>
+          <line>518</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.0.5.RELEASE/spring-boot-autoconfigure-2.0.5.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/web/servlet/TomcatServletWebServerFactoryCustomizer.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.0.5.RELEASE/spring-boot-2.0.5.RELEASE-sources.jar!/org/springframework/boot/web/embedded/tomcat/TomcatWebServer.java</url>
+          <line>90</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.0.5.RELEASE/spring-boot-2.0.5.RELEASE-sources.jar!/org/springframework/boot/web/embedded/tomcat/TomcatWebServer.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.0.5.RELEASE/spring-boot-2.0.5.RELEASE-sources.jar!/org/springframework/boot/web/embedded/tomcat/TomcatServletWebServerFactory.java</url>
+          <line>412</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
