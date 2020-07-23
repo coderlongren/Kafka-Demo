@@ -11,8 +11,11 @@
 package com.coderlong.kafka.producer;
 
 import com.coderlong.kafka.consumer.AbstractConsumer;
+
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -28,13 +31,16 @@ import java.util.Properties;
  * @since 1.0.0
  */
 public class KafkaDemoProducer {
+    private static final Logger LOGGER = LoggerFactory.getLogger(KafkaDemoProducer.class);
     private static Properties properties = null;
+    private static final String DEMO_TOPIC = "test";
+    private static final String KAFKA_PRODUCE_CONFIG_PATH = "kafka_producer.properties";
 
     static {
         properties = new Properties();
         try {
-//            FileInputStream fileInputStream = new FileInputStream(new File("kafka.properties"));
-            InputStream inputStream = AbstractConsumer.class.getClassLoader().getResourceAsStream("kafka_producer.properties");
+            InputStream inputStream =
+                    AbstractConsumer.class.getClassLoader().getResourceAsStream(KAFKA_PRODUCE_CONFIG_PATH);
             properties.load(inputStream);
         } catch (IOException e) {
             System.out.println(e.getStackTrace());
@@ -47,9 +53,9 @@ public class KafkaDemoProducer {
             producer = new KafkaProducer<String, String>(properties);
             for (int i = 0; i < 100; i++) {
                 String msg = "This is Message " + i;
-                producer.send(new ProducerRecord<String, String>("HelloWorld", msg));
+                producer.send(new ProducerRecord<String, String>(DEMO_TOPIC, msg));
                 System.out.println("Sent:" + msg);
-//                Thread.sleep(1000);
+                //                Thread.sleep(1000);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -57,7 +63,9 @@ public class KafkaDemoProducer {
             producer.close();
         }
 
+
     }
+
     public void sendSync() {
 
     }
